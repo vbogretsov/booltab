@@ -22,7 +22,7 @@ enum
     E_UNEXPECTED_TOKEN,
 };
 
-#define VERSION    "1.0.0"
+#define VERSION    "1.0.1"
 #define NAME       "booltab"
 #define USAGE      "EXPRESSION\n\n" \
 "  Calculate the boolean expressison for all possible values of its variables.\n" \
@@ -226,8 +226,12 @@ static int calculate(px_token_t* infix, void** einfo)
             return err;
         }
 
+        int value = res.var.name == 0
+            ? res.var.value
+            : valueof(res.var.name, &i);
+
         printvars(i, nvars);
-        printf("%d\n", res.var.value);
+        printf("%d\n", value);
     }
 
     return err;
