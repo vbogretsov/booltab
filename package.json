@@ -1,7 +1,7 @@
 {
   "name": "booltab",
   "repo": "vbogretsov/booltab",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "boolean expressions evaluator",
   "keywords": [
