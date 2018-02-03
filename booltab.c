@@ -22,7 +22,7 @@ enum
     E_UNEXPECTED_TOKEN,
 };
 
-#define VERSION    "0.0.0"
+#define VERSION    "1.0.0"
 #define NAME       "booltab"
 #define USAGE      "EXPRESSION\n\n" \
 "  Calculate the boolean expressison for all possible values of its variables.\n" \
