@@ -5,6 +5,7 @@ DEPS            = $(wildcard $(DIRDEPS)/*/*.c)
 OBJS            = $(DEPS:.c=.o) $(SRC:.c=.o)
 BOOLTAB         = booltab
 TESTSCRIPT      = ./runtests.sh
+PREFIX         ?= /usr/local
 
 default: $(BOOLTAB)
 
@@ -18,6 +19,9 @@ $(BOOLTAB): $(OBJS)
 
 test: $(BOOLTAB) $(TESTSCRIPT)
 	@$(TESTSCRIPT)
+
+install: $(BOOLTAB)
+	@cp $(BOOLTAB) $(PREFIX)/bin/
 
 clean:
 	$(foreach c, $(OBJS), rm -f $(c))

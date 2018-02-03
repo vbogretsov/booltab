@@ -237,7 +237,7 @@ static int run(command_t* cmd)
 {
     if (0 == cmd->argc)
     {
-        fprintf(stderr, "%s %s %s\n", MSG_E, MSG_E_MISSING_EXPRESSION, USAGE);
+        fprintf(stderr, "%s %s EXPRESSION\n", MSG_E, MSG_E_MISSING_EXPRESSION);
         return E_MISSING_EXPRESSION;
     }
 
